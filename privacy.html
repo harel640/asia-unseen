@@ -38,7 +38,11 @@
     <p class="muted">To upload to our own channel, the tool uses Google OAuth. The resulting authorization token is held privately by the channel's operator and is used solely to upload videos to the operator's own channel. It is never shared, and it grants no access to any other person's YouTube account or data. Access can be reviewed or revoked at any time at <a href="https://myaccount.google.com/permissions" rel="noopener" target="_blank">your Google Account permissions</a>.</p>
 
     <h2>4. Scopes we request</h2>
-    <p class="muted">The tool requests only the YouTube scopes needed to upload and manage videos on our own channel (for example <code>youtube.upload</code>). It does not request access to other people's accounts or private data.</p>
+    <p class="muted">We request only the two Google OAuth scopes below, and use them solely for our own channel. We do not request access to any other person's account or private data.</p>
+    <ul>
+      <li><code>https://www.googleapis.com/auth/youtube.upload</code> — to <strong>upload videos to our own YouTube channel</strong>.</li>
+      <li><code>https://www.googleapis.com/auth/youtube.readonly</code> — used <strong>only</strong> to read our own channel's name so we can <strong>confirm the authenticated channel is @AsiaUnseen-AU before each upload</strong> (a safety check that prevents uploading to the wrong channel). It is not used to read, collect or store any other data.</li>
+    </ul>
 
     <h2>5. Data sharing &amp; selling</h2>
     <p class="muted">We do not transfer, share or sell any user data to third parties. We use no personal data for advertising or for training any generalized AI/ML models.</p>
